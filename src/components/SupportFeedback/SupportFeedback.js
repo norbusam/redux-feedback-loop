@@ -19,7 +19,7 @@ class SupportFeedback extends Component {
         }else {
             console.log('added');
             this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.support})
-            // this.props.history.push('/support')
+            this.props.history.push('/comment')
         }
     }
     render(){
