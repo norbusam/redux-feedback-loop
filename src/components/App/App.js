@@ -12,13 +12,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header/>
-        <FeelingFeedback/>
-        <br/>
-      </div>
+      <Router>
+        <div className="App">
+          <Header/>
+          {/* <FeelingFeedback/> */}
+          <br/>
+        </div>
+        
+        <Route exact path ='/' component={FeelingFeedback}/>
+      </Router>
     );
   }
 }
 
-export default connect()(App);
+const reduxStoreOnProps = (reduxStore) => ({
+  reduxStore
+})
+
+export default connect(reduxStoreOnProps)(App);

@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 const feedBackReducer = (state=[], action) => {
     switch(action.type){
         case "ADD_FEEDBACK":
-            return action.payload;
+            return [...state,action.payload];
         default:
             return state;
     }
