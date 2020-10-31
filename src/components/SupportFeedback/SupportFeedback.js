@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
 class SupportFeedback extends Component {
     state = {
         support: 0
     }
-
+    // set the state to the input value
     handleChange = (event) => {
-        console.log(event.target.value);
         this.setState({
             support: event.target.value
         })
     }// end handleChange
 
     submitAndNext = () =>{
+        // input validation
         if(this.state.support === 0 || this.state.support === ''){
             alert('Please submit a value between 1-5')
         }else {
@@ -21,7 +21,7 @@ class SupportFeedback extends Component {
             this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.support})
             this.props.history.push('/comment')
         }
-    }
+    }// end submitAndNext
     render(){
         return(
             <div>

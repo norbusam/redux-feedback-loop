@@ -8,7 +8,6 @@ class FeelingFeedback extends Component {
     }
     // grabs the value and set the state to the value
     handleChange = (event) => {
-    
         console.log(event.target.value);
         this.setState({
             feeling: event.target.value
@@ -16,15 +15,14 @@ class FeelingFeedback extends Component {
     }// end handleChange
 
     submitAndNext = () =>{
+        // input validation
         if(this.state.feeling === 0 || this.state.feeling === ''){
             alert('Please submit a value between 1-5')
         }else {
-            console.log('added');
             this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.feeling})
             this.props.history.push('/content')
         }
-       
-    }
+    }// end submitAndNext
 
     render(){
         return(

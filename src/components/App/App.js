@@ -13,20 +13,15 @@ import ThankYou from '../ThankYou/ThankYou';
 import {connect} from 'react-redux';
 import {HashRouter as Router, Route} from 'react-router-dom';
 
-
-
-
 class App extends Component {
-
   render() {
     return (
       <Router>
         <div className="App">
           <Header/>
-          {/* <FeelingFeedback/> */}
           <br/>
         </div>
-        
+        {/*Routes to each component */}
         <Route exact path ='/' component={FeelingFeedback}/>
         <Route  path ='/content' component={ContentFeedback}/>
         <Route  path ='/support' component={SupportFeedback}/>
@@ -37,7 +32,7 @@ class App extends Component {
     );
   }
 }
-
+{/*reduxStore and reducer called */}
 const reduxStoreOnProps = (reduxStore) => ({
   reduxStore
 })

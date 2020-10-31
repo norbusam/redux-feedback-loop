@@ -14,14 +14,9 @@ class CommentFeedback extends Component {
     }// end handleChange
 
     submitAndNext = () =>{
-        if(this.state.comment === 0 || this.state.comment === ''){
-            alert('Please submit a value between 1-5')
-        }else {
-            console.log('added');
             this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.comment})
             this.props.history.push('/review')
-        }
-    }
+    }// end submitAndNext
 
     render(){
         return(

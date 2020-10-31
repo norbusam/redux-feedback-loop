@@ -4,16 +4,16 @@ import {connect} from 'react-redux';
 import axios from 'axios';
 
 class Review extends Component {
-
     state = {
-            feeling: this.props.reduxStore.feedBackReducer[0],
-            understanding: this.props.reduxStore.feedBackReducer[1],
-            support: this.props.reduxStore.feedBackReducer[2],
-            comments: this.props.reduxStore.feedBackReducer[3]
+        feeling: this.props.reduxStore.feedBackReducer[0],
+        understanding: this.props.reduxStore.feedBackReducer[1],
+        support: this.props.reduxStore.feedBackReducer[2],
+        comments: this.props.reduxStore.feedBackReducer[3]
     }
 
     handleSubmit = () => {
         console.log('submitted', this.state);
+        // axios post to database
         axios.post('/feedback', this.state)
             .then(response=>{
                 console.log('back from server', response.data);
