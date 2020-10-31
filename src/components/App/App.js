@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+// components
+import Header from '../Header/Header'
 import FeelingFeedback from '../FeelingFeedback/FeelingFeedback'
 // connects to our reduxStore
 import {connect} from 'react-redux';
@@ -11,10 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-        </header>
+        <Header/>
         <FeelingFeedback/>
         <br/>
       </div>
