@@ -3,9 +3,10 @@ import axios from 'axios';
 import './App.css';
 // connects to our reduxStore
 import {connect} from 'react-redux';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -19,4 +20,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);

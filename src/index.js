@@ -9,10 +9,19 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+const feedBackReducer = (state=[], action) => {
+    switch(action.type){
+        case "ADD_FEEDBACK":
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 // The store is the big JavaScript Object that holds all of the information for our application
 const storeInstance = createStore(
     combineReducers({
-        
+        feedBackReducer
     }),
     applyMiddleware(logger),
 );
