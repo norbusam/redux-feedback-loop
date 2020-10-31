@@ -1,33 +1,32 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
-class ContentFeedback extends Component {
+class SupportFeedback extends Component {
     state = {
-        content: 0
+        support: 0
     }
 
     handleChange = (event) => {
         console.log(event.target.value);
         this.setState({
-            content: event.target.value
+            support: event.target.value
         })
     }// end handleChange
 
     submitAndNext = () =>{
-        if(this.state.content === 0 || this.state.content === ''){
+        if(this.state.support === 0 || this.state.support === ''){
             alert('Please submit a value between 1-5')
         }else {
             console.log('added');
-            this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.content})
-            this.props.history.push('/support')
+            this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.support})
+            // this.props.history.push('/support')
         }
     }
-
     render(){
         return(
             <div>
-                <h1>How well are you understanding the content?</h1>
-                <label html="understanding">Understanding?</label>
+                <h1>How well are you being supported?</h1>
+                <label html="support">Support?</label>
                 <input type="number" min="1" max="5" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>
@@ -35,4 +34,4 @@ class ContentFeedback extends Component {
     }
 }
 
-export default connect()(ContentFeedback);
+export default connect()(SupportFeedback);
