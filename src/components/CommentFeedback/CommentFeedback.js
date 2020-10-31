@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 
 class CommentFeedback extends Component {
     state = {
-        comment: 0
+        comment: ''
     }
 
     handleChange = (event) => {
