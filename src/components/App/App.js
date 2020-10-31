@@ -4,9 +4,11 @@ import './App.css';
 // components
 import Header from '../Header/Header'
 import FeelingFeedback from '../FeelingFeedback/FeelingFeedback'
+import ContentFeedback from '../ContentFeedback/ContentFeedback';
 // connects to our reduxStore
 import {connect} from 'react-redux';
 import {HashRouter as Router, Route} from 'react-router-dom';
+
 
 class App extends Component {
 
@@ -20,6 +22,7 @@ class App extends Component {
         </div>
         
         <Route exact path ='/' component={FeelingFeedback}/>
+        <Route  path ='/content' component={ContentFeedback}/>
       </Router>
     );
   }

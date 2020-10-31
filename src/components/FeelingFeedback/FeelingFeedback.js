@@ -24,6 +24,7 @@ class FeelingFeedback extends Component {
         //     console.log('added');
         // }
         this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.feeling})
+        this.props.history.push('/content')
     }
 
     render(){
