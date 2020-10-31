@@ -8,6 +8,7 @@ import ContentFeedback from '../ContentFeedback/ContentFeedback';
 import SupportFeedback from '../SupportFeedback/SupportFeedback';
 import CommentFeedback from '../CommentFeedback/CommentFeedback';
 import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 // connects to our reduxStore
 import {connect} from 'react-redux';
 import {HashRouter as Router, Route} from 'react-router-dom';
@@ -31,6 +32,7 @@ class App extends Component {
         <Route  path ='/support' component={SupportFeedback}/>
         <Route  path ='/comment' component={CommentFeedback}/>
         <Route  path ='/review' component={Review}/>
+        <Route  path ='/thanks' component={ThankYou}/>
       </Router>
     );
   }

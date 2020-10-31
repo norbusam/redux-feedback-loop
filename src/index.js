@@ -13,9 +13,12 @@ const feedBackReducer = (state=[], action) => {
     switch(action.type){
         case "ADD_FEEDBACK":
             return [...state,action.payload];
+        case "CLEAR_FEEDBACK":
+            return [];
         default:
             return state;
     }
+    
 }
 
 // The store is the big JavaScript Object that holds all of the information for our application
