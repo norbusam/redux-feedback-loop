@@ -16,7 +16,7 @@ class FeelingFeedback extends Component {
     }// end handleChange
 
     submitAndNext = () =>{
-        // input validation
+        // input and correct value validation 
         if(this.state.feeling === 0 || this.state.feeling === ''){
             alert('Please submit a value between 1-5')
         }else {

@@ -14,13 +14,16 @@ class SupportFeedback extends Component {
     }// end handleChange
 
     submitAndNext = () =>{
-        // input validation
+        // input and value validation
         if(this.state.support === 0 || this.state.support === ''){
             alert('Please submit a value between 1-5')
         }else {
-            console.log('added');
-            this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.support})
-            this.props.history.push('/comment')
+            if(this.state.support <= 0 || this.state.support > 5){
+                alert('A value between 1-5')
+            } else{
+                this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.support})
+                this.props.history.push('/comment')
+            }
         }
     }// end submitAndNext
     render(){

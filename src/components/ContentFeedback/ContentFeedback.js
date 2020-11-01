@@ -14,13 +14,16 @@ class ContentFeedback extends Component {
     }// end handleChange
 
     submitAndNext = () =>{
-        // input validation to check for empty field
+        // input validation to check for empty field and correct value
         if(this.state.content === 0 || this.state.content === ''){
             alert('Please submit a value between 1-5')
         }else {
-            console.log('added');
-            this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.content})
-            this.props.history.push('/support')
+            if(this.state.content <= 0 || this.state.content > 5){
+                alert('A value between 1-5')
+            } else{
+                this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.content})
+                this.props.history.push('/support')
+            }
         }
     }// end submitAndNext
 
