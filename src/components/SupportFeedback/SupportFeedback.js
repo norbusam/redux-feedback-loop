@@ -28,10 +28,11 @@ class SupportFeedback extends Component {
     }// end submitAndNext
     render(){
         return(
-            <div className="main">
+            <div className="mainSupport">
                 <h1>How well are you being supported?</h1>
                 <label html="support">Support?</label>
-                <input type="number" min="1" max="5" onChange={this.handleChange}/>
+                <br/>
+                <input id="supportInput" type="number" min="1" max="5" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>
         )

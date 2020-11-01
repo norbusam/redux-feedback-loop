@@ -12,7 +12,7 @@ class ThankYou extends Component {
     }
     render(){
         return(
-            <div className="main">
+            <div className="mainThank">
                 <h2>Thank you for the feedback!</h2>
 
                 <button id="center" onClick={this.nextPage}>Leave New feedback</button>

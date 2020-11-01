@@ -31,9 +31,10 @@ class FeelingFeedback extends Component {
 
     render(){
         return(
-            <div className="main">
+            <div className="mainFeeling">
                 <h1>How are you feeling today?</h1>
-                <label id="label" html="feeling">Feeling?</label>
+                <label id="label" html="feeling"><i>Feeling?</i></label>
+                <br/>
                 <input type="number" min="1" max="5" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>

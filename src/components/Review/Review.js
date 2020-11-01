@@ -26,11 +26,12 @@ class Review extends Component {
  
     render(){
         return(
-            <div className="main">
-                <p>Feelings:{this.state.feeling}</p>
-                <p>understanding:{this.state.understanding}</p>
-                <p>Support:{this.state.support}</p>
-                <p>Comments:{this.state.comments}</p>
+            <div className="mainReview">
+                <h2>Review:</h2>
+                <p><i>Feelings</i>: {this.state.feeling}</p>
+                <p><i>understanding</i>: {this.state.understanding}</p>
+                <p><i>Support</i>: {this.state.support}</p>
+                <p><i>Comments</i>: {this.state.comments}</p>
                 <button onClick={this.handleSubmit}>Submit</button>
             </div>
             

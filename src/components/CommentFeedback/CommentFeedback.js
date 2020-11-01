@@ -21,9 +21,10 @@ class CommentFeedback extends Component {
 
     render(){
         return(
-            <div className="main">
+            <div className="mainComment">
                 <h1>Any comment you want to leave?</h1>
-                <label html="comments">Comments?</label>
+                <label html="comments"><i>Comments?</i></label>
+                <br/>
                 <input type="text" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>

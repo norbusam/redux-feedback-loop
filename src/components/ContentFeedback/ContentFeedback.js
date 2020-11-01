@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import './ContentFeedback.css'
 
 class ContentFeedback extends Component {
     state = {
@@ -29,10 +30,11 @@ class ContentFeedback extends Component {
 
     render(){
         return(
-            <div className="main">
+            <div className="mainContent">
                 <h1>How well are you understanding the content?</h1>
-                <label html="understanding">Understanding?</label>
-                <input type="number" min="1" max="5" onChange={this.handleChange}/>
+                <label html="understanding"><i>Understanding?</i></label>
+                <br/>
+                <input id="contentInput" type="number" min="1" max="5" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>
         )
