@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import './FeelingFeedback.css'
 
 class FeelingFeedback extends Component {
 
@@ -19,16 +20,20 @@ class FeelingFeedback extends Component {
         if(this.state.feeling === 0 || this.state.feeling === ''){
             alert('Please submit a value between 1-5')
         }else {
+            if(this.state.feeling <= 0 || this.state.feeling > 5){
+                alert('A value between 1-5')
+            } else{
             this.props.dispatch({type:"ADD_FEEDBACK", payload: this.state.feeling})
             this.props.history.push('/content')
+            }
         }
     }// end submitAndNext
 
     render(){
         return(
-            <div>
+            <div className="main">
                 <h1>How are you feeling today?</h1>
-                <label html="feeling">Feeling?</label>
+                <label id="label" html="feeling">Feeling?</label>
                 <input type="number" min="1" max="5" onChange={this.handleChange}/>
                 <button onClick={this.submitAndNext}>Next</button>
             </div>

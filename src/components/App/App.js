@@ -32,7 +32,6 @@ class App extends Component {
     );
   }
 }
-{/*reduxStore and reducer called */}
 const reduxStoreOnProps = (reduxStore) => ({
   reduxStore
 })
