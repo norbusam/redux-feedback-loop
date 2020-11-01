@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import './CommentFeedback.css'
 
 class CommentFeedback extends Component {
     state = {
@@ -20,7 +21,7 @@ class CommentFeedback extends Component {
 
     render(){
         return(
-            <div>
+            <div className="main">
                 <h1>Any comment you want to leave?</h1>
                 <label html="comments">Comments?</label>
                 <input type="text" onChange={this.handleChange}/>

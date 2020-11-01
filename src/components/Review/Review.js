@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import './Review.css'
 // axios 
 import axios from 'axios';
 
@@ -25,7 +26,7 @@ class Review extends Component {
  
     render(){
         return(
-            <div>
+            <div className="main">
                 <p>Feelings:{this.state.feeling}</p>
                 <p>understanding:{this.state.understanding}</p>
                 <p>Support:{this.state.support}</p>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import './SupportFeedback.css'
 
 class SupportFeedback extends Component {
     state = {
@@ -24,7 +25,7 @@ class SupportFeedback extends Component {
     }// end submitAndNext
     render(){
         return(
-            <div>
+            <div className="main">
                 <h1>How well are you being supported?</h1>
                 <label html="support">Support?</label>
                 <input type="number" min="1" max="5" onChange={this.handleChange}/>

@@ -26,7 +26,7 @@ class ContentFeedback extends Component {
 
     render(){
         return(
-            <div>
+            <div className="main">
                 <h1>How well are you understanding the content?</h1>
                 <label html="understanding">Understanding?</label>
                 <input type="number" min="1" max="5" onChange={this.handleChange}/>

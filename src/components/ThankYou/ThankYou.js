@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import './ThankYou.css'
 
 class ThankYou extends Component {
     // function to clear and go back to home page
@@ -11,10 +12,10 @@ class ThankYou extends Component {
     }
     render(){
         return(
-            <div>
-            <h2>Thank you for the feedback</h2>
+            <div className="main">
+                <h2>Thank you for the feedback!</h2>
 
-            <button onClick={this.nextPage}>Leave New feedback</button>
+                <button id="center" onClick={this.nextPage}>Leave New feedback</button>
             </div>
         )
     }
